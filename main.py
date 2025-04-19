@@ -3,7 +3,7 @@ import random
 from pydantic import BaseModel
 app = FastAPI()
 
-class Estudante(Basemodel):
+class Estudante(BaseModel):
     name: str
     curso: str
     ativo: bool
