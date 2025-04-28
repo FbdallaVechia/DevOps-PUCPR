@@ -4,14 +4,11 @@ on:
   - push
 
 jobs:
-  git:
+  discord:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
       - name: Run Discord Webhook
-        uses: johnnyhuy/actions-discord-git-webhook@main
-      - name: Discord Commits
         uses: Sniddl/discord-commits@v1.6
         with:
           webhook: ${{ secrets.DISCORD_WEBHOOK }}
